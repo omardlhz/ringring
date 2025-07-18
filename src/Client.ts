@@ -80,7 +80,7 @@ export class Client {
     const appChannel = this.createChannel(NAMESPACE.CUSTOM_IMAGE, transportId);
     appChannel.send({
       type: "SET_IMAGE",
-      url: " http://192.168.0.104:11080/endpoint/@scrypted/webhook/public/35/d9b7cb1eb6526969",
+      url: "http://192.168.0.104:11080/endpoint/@scrypted/webhook/public/35/d9b7cb1eb6526969",
     });
   }
 
