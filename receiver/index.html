@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ring Ring</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      type="text/javascript"
+      src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js"
+    ></script>
+  </head>
+  <body>
+    <div class="layout">
+      <div class="image-section">
+        <img id="snapshot" src="" alt="Snapshot" />
+      </div>
+      <div class="content-section">
+        <div class="status-text-wrapper">
+          <div class="status-text">Hey! You’ve got company.</div>
+        </div>
+        <button id="ack-btn">Dismiss</button>
+      </div>
+    </div>
+    <cast-media-player></cast-media-player>
+    <script>
+      cast.framework.CastReceiverContext.getInstance().start();
+    </script>
+  </body>
+</html>
