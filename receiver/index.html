@@ -25,27 +25,6 @@
 
     <script>
       const context = cast.framework.CastReceiverContext.getInstance();
-
-      var castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
-      var messageBus = castReceiverManager.getCastMessageBus(
-        "urn:x-cast:com.ringring.cast.image"
-      );
-      // Add message listener to the message bus
-      messageBus.onMessage = function (event) {
-        if (
-          event.data.type === "SET_IMAGE" &&
-          typeof event.data.url === "string"
-        ) {
-          const img = document.getElementById("snapshot");
-          img.src = event.data.url;
-        }
-      };
-
-      // Handle dismiss button
-      document.getElementById("ack-btn").addEventListener("click", () => {
-        context.stop(); // Ends session and returns to idle screen
-      });
-
       context.start();
     </script>
   </body>
