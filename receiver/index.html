@@ -22,10 +22,9 @@
         <button id="ack-btn">Dismiss</button>
       </div>
     </div>
-
+    <cast-media-player></cast-media-player>
     <script>
-      const context = cast.framework.CastReceiverContext.getInstance();
-      context.start();
+      cast.framework.CastReceiverContext.getInstance().start();
     </script>
   </body>
 </html>
